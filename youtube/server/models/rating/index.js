@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const RatingSchema = new Schema({
+const ratingSchema = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
     ref: "Channel",
@@ -29,4 +29,4 @@ const RatingSchema = new Schema({
 
 require("./methods")(ratingSchema);
 
-module.exports = mongoose.model("Rating", RatingSchema);
+module.exports = mongoose.model("Rating", ratingSchema);
